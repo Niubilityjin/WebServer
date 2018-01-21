@@ -4,6 +4,7 @@ import java.io.InputStream;
 
 public class HttpRequest {
 	/**
+	 * mm
 	 * 用于读取客户端发送过来数据的输入流,该流应该是通过Socket获取的输入流.
 	 */
 	private InputStream in;
