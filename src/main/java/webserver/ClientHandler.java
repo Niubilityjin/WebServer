@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.net.Socket;
 
 /**
+ * nnnn
  * 该线程任务提供WebServer使用,负责处理指定客户端的交互
  * @author Administrator
  *

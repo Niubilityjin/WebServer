@@ -48,7 +48,7 @@ public class HttpRequest {
 		char c1='a';
 		char c2='a';
 		while((d=in.read())!=-1) {
-			c2
+			break;
 		}
 		return null;
 	}
