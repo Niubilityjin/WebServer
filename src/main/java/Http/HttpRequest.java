@@ -1,5 +1,6 @@
 package Http;
 
+import java.io.IOException;
 import java.io.InputStream;
 
 public class HttpRequest {
@@ -44,14 +45,25 @@ public class HttpRequest {
 	 * @return
 	 */
 	private String readLine() {
-		StringBuiler builder=new StringBuilder();
-		int d=-1;
-		char c1='a';
-		char c2='a';
-		while((d=in.read())!=-1) {
-			break;
+		StringBuilder builder=new StringBuilder();
+		try {
+			int d=-1;
+			char c1='a';
+			char c2='a';
+			while((d=in.read())!=-1) {
+				c2=(char)d;
+				if(c1==13&&c2==10) {
+					break;
+				}
+				builder.append(c2);
+				c1=c2;
+			}
+			return builder.toString().trim();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
 		}
-		return null;
+		return "";
 	}
 
 }
