@@ -40,6 +40,7 @@ public class HttpRequest {
 	}
 	/**
 	 * 解析请求行
+	 * 
 	 * @param in
 	 */
 	private void parseRequestLine(){
